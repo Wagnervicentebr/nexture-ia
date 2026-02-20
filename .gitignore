@@ -1,0 +1,8 @@
+.env
+dist
+.vite
+.env.local
+.DS_Store
+.cursor
+node_modules
+

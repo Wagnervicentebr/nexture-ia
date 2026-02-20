@@ -1,6 +1,7 @@
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import logoNexture from '../../assets/logo-nexture.png';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,7 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-br from-[#0B1C3F] via-[#1E3A8A] to-[#2563EB] border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -22,13 +23,12 @@ export function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <a href="#" className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#2563EB] to-[#7C3AED] flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-xl">N</span>
-              </div>
-              <span className="text-2xl font-['Poppins'] font-bold text-[#0B1C3F]">
-                NEXTURE
-              </span>
+            <a href="#" className="flex items-center">
+              <img
+                src={logoNexture}
+                alt="Nexture IA"
+                className="h-10 w-auto object-contain"
+              />
             </a>
           </motion.div>
 
@@ -43,7 +43,7 @@ export function Navbar() {
               <a
                 key={index}
                 href={link.href}
-                className="text-gray-700 hover:text-[#2563EB] font-medium font-['Inter'] transition-colors"
+                className="text-white/90 hover:text-white font-medium font-['Inter'] transition-colors"
               >
                 {link.label}
               </a>
@@ -70,7 +70,7 @@ export function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-gray-700 hover:text-[#2563EB] transition-colors"
+            className="md:hidden p-2 text-white/90 hover:text-white transition-colors"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -82,14 +82,14 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden py-6 border-t border-gray-200"
+            className="md:hidden py-6 border-t border-white/10"
           >
             <div className="flex flex-col gap-4">
               {navLinks.map((link, index) => (
                 <a
                   key={index}
                   href={link.href}
-                  className="text-gray-700 hover:text-[#2563EB] font-medium font-['Inter'] transition-colors py-2"
+                  className="text-white/90 hover:text-white font-medium font-['Inter'] transition-colors py-2"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}
