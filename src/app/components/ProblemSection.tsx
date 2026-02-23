@@ -28,11 +28,6 @@ export function ProblemSection() {
       icon: Users,
       title: 'Baixa produtividade de juniores',
       description: 'Desenvolvedores iniciantes levam tempo para gerar valor real'
-    },
-    {
-      icon: Code,
-      title: 'Dependência de terceiros',
-      description: 'Projetos travam por falta de autonomia técnica interna'
     }
   ];
 

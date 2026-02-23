@@ -5,44 +5,44 @@ export function MetricsSection() {
   const metrics = [
     {
       icon: Clock,
-      value: '3-6 meses',
+      value: '4-8 meses',
       label: 'Time to Productivity',
-      description: 'Juniores produzindo como plenos',
+      description: 'Juniores ganhando autonomia e entregando como plenos',
       color: 'from-blue-500 to-blue-600'
     },
     {
       icon: DollarSign,
-      value: '60-70%',
+      value: '40-50%',
       label: 'Redução de Custo',
-      description: 'vs. contratação de seniores',
+      description: 'vs. contratação direta de seniores',
       color: 'from-green-500 to-green-600'
     },
     {
       icon: Rocket,
-      value: '300%',
-      label: 'Aumento de Produtividade',
-      description: 'Com uso efetivo de IA',
+      value: '25-40%',
+      label: 'Ganho de Produtividade',
+      description: 'Com adoção consistente de IA no fluxo de trabalho',
       color: 'from-purple-500 to-purple-600'
     },
     {
       icon: Users,
-      value: '85%',
+      value: '60%+',
       label: 'Taxa de Retenção',
-      description: 'Talentos permanecem na empresa',
+      description: 'Talentos formados permanecem na empresa',
       color: 'from-indigo-500 to-indigo-600'
     },
     {
       icon: BarChart3,
-      value: '10+',
+      value: 'Múltiplos',
       label: 'Projetos Entregues',
       description: 'Durante o período de formação',
       color: 'from-orange-500 to-orange-600'
     },
     {
       icon: TrendingUp,
-      value: '4x',
-      label: 'ROI Médio',
-      description: 'Retorno sobre investimento em 12 meses',
+      value: '1,5x-2x',
+      label: 'ROI em 12 meses',
+      description: 'Retorno sobre investimento em capacitação',
       color: 'from-teal-500 to-teal-600'
     }
   ];
@@ -120,19 +120,19 @@ export function MetricsSection() {
         >
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold font-['Poppins'] mb-2">500+</div>
+              <div className="text-3xl font-bold font-['Poppins'] mb-2">120+</div>
               <div className="text-sm text-blue-100">Desenvolvedores Formados</div>
             </div>
             <div>
-              <div className="text-3xl font-bold font-['Poppins'] mb-2">50+</div>
+              <div className="text-3xl font-bold font-['Poppins'] mb-2">15+</div>
               <div className="text-sm text-blue-100">Empresas Parceiras</div>
             </div>
             <div>
-              <div className="text-3xl font-bold font-['Poppins'] mb-2">200+</div>
+              <div className="text-3xl font-bold font-['Poppins'] mb-2">40+</div>
               <div className="text-sm text-blue-100">Projetos Entregues</div>
             </div>
             <div>
-              <div className="text-3xl font-bold font-['Poppins'] mb-2">95%</div>
+              <div className="text-3xl font-bold font-['Poppins'] mb-2">90%</div>
               <div className="text-sm text-blue-100">Satisfação dos Clientes</div>
             </div>
           </div>

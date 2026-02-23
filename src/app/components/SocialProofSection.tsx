@@ -1,42 +1,59 @@
+import React, { type ReactNode } from 'react';
 import { motion } from 'motion/react';
 import { Quote, Star, Building2 } from 'lucide-react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+
+const NOVIGO_LOGO = 'https://novigo-it.com/wp-content/uploads/2024/09/logo-novigoit.svg';
+
+type Testimonial = {
+  company: string;
+  logo: string;
+  logoUrl?: string;
+  logoSvg?: ReactNode;
+  content: string;
+  rating: number;
+};
 
 export function SocialProofSection() {
-  const testimonials = [
+  const testimonials: Testimonial[] = [
     {
-      company: 'TechCorp Brasil',
-      logo: 'TC',
-      author: 'Carlos Mendes',
-      role: 'CTO',
+      company: 'Novigo',
+      logo: 'N',
+      logoUrl: NOVIGO_LOGO,
       content: 'A Nexture transformou nosso time júnior em desenvolvedores altamente produtivos. Em 4 meses, eles já entregavam features complexas com autonomia.',
-      rating: 5,
-      image: 'https://images.unsplash.com/photo-1758518732175-5d608ba3abdf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMG1lZXRpbmd8ZW58MXx8fHwxNzcxNDYzNzM0fDA&ixlib=rb-4.1.0&q=80&w=1080'
+      rating: 5
     },
     {
-      company: 'Startup Labs',
-      logo: 'SL',
-      author: 'Ana Paula Silva',
-      role: 'Head of Engineering',
+      company: 'Nexa Digital',
+      logo: 'ND',
+      logoSvg: (
+        <svg viewBox="0 0 48 48" fill="none" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" rx="10" fill="url(#nexaDigitalGrad)" />
+          <path d="M14 16h6l4 8 4-8h6v16h-5V24l-3 6-3-6v8h-5V16z" fill="white" />
+          <defs><linearGradient id="nexaDigitalGrad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop stopColor="#0ea5e9" /><stop offset="1" stopColor="#6366f1" /></linearGradient></defs>
+        </svg>
+      ),
       content: 'Contratamos 3 desenvolvedores formados pela Nexture. Chegaram sabendo usar IA, com mentalidade de produto e velocidade impressionante.',
-      rating: 5,
-      image: 'https://images.unsplash.com/photo-1770777843445-2a1621b1201d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjB0ZWFtd29yayUyMGNvbGxhYm9yYXRpb258ZW58MXx8fHwxNzcxNDIzNDMwfDA&ixlib=rb-4.1.0&q=80&w=1080'
+      rating: 5
     },
     {
-      company: 'InnovateTech',
-      logo: 'IT',
-      author: 'Roberto Almeida',
-      role: 'VP de Produto',
-      content: 'Reduzimos nosso backlog em 60% após implementar o programa de capacitação da Nexture. O ROI foi evidente já no terceiro mês.',
-      rating: 5,
-      image: 'https://images.unsplash.com/photo-1759661966728-4a02e3c6ed91?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwZGFzaGJvYXJkJTIwYW5hbHl0aWNzfGVufDF8fHx8MTc3MTUzMDI2Nnww&ixlib=rb-4.1.0&q=80&w=1080'
+      company: 'FlowTech',
+      logo: 'FT',
+      logoSvg: (
+        <svg viewBox="0 0 48 48" fill="none" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" rx="10" fill="url(#flowTechGrad)" />
+          <path d="M12 26h8v-6l6 10h-8v6l-6-10zM26 16h10l-4 16h-4l4-16z" fill="white" />
+          <defs><linearGradient id="flowTechGrad" x1="0" y1="48" x2="48" y2="0" gradientUnits="userSpaceOnUse"><stop stopColor="#059669" /><stop offset="1" stopColor="#0d9488" /></linearGradient></defs>
+        </svg>
+      ),
+      content: 'Reduzimos nosso backlog de forma significativa após implementar o programa de capacitação da Nexture. O retorno foi evidente já no terceiro mês.',
+      rating: 5
     }
   ];
 
   const partnerLogos = [
-    { name: 'TechCorp', abbr: 'TC' },
-    { name: 'StartupLabs', abbr: 'SL' },
-    { name: 'InnovateTech', abbr: 'IT' },
+    { name: 'Novigo', abbr: 'N' },
+    { name: 'Nexa Digital', abbr: 'ND' },
+    { name: 'FlowTech', abbr: 'FT' },
     { name: 'CloudSystems', abbr: 'CS' },
     { name: 'DataFlow', abbr: 'DF' },
     { name: 'AgileWorks', abbr: 'AW' },
@@ -47,19 +64,19 @@ export function SocialProofSection() {
   const caseStudies = [
     {
       company: 'E-commerce Platform',
-      metric: '5x',
+      metric: '2x',
       description: 'Aumento na velocidade de entrega',
       icon: '🚀'
     },
     {
       company: 'Fintech Startup',
-      metric: '70%',
+      metric: '55%',
       description: 'Redução de custo com desenvolvimento',
       icon: '💰'
     },
     {
       company: 'SaaS Company',
-      metric: '12',
+      metric: '10',
       description: 'Projetos entregues em 6 meses',
       icon: '📊'
     }
@@ -97,13 +114,19 @@ export function SocialProofSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all"
+              className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all flex flex-col"
             >
               <div className="flex items-start justify-between mb-4">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#2563EB] to-[#7C3AED] flex items-center justify-center text-white font-bold shadow-lg">
-                  {testimonial.logo}
+                <div className="w-20 h-20 rounded-xl bg-gray-50 border border-gray-100 flex items-center justify-center overflow-hidden shadow-md shrink-0 p-2">
+                  {testimonial.logoUrl ? (
+                    <img src={testimonial.logoUrl} alt={testimonial.company} className="w-full h-full object-contain" />
+                  ) : testimonial.logoSvg ? (
+                    <span className="w-14 h-14 block">{testimonial.logoSvg}</span>
+                  ) : (
+                    <span className="text-2xl text-[#2563EB] font-bold">{testimonial.logo}</span>
+                  )}
                 </div>
-                <Quote className="w-8 h-8 text-gray-200" />
+                <Quote className="w-8 h-8 text-gray-200 shrink-0" />
               </div>
               
               <div className="flex gap-1 mb-4">
@@ -112,16 +135,21 @@ export function SocialProofSection() {
                 ))}
               </div>
               
-              <p className="text-gray-700 mb-6 leading-relaxed">
+              <p className="text-gray-700 mb-6 leading-relaxed flex-1">
                 "{testimonial.content}"
               </p>
               
-              <div className="flex items-center gap-3 pt-4 border-t border-gray-200">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-gray-300 to-gray-400" />
-                <div>
-                  <div className="font-semibold text-[#0B1C3F] text-sm">{testimonial.author}</div>
-                  <div className="text-xs text-gray-500">{testimonial.role} • {testimonial.company}</div>
+              <div className="pt-4 border-t border-gray-200 flex items-center gap-3">
+                <div className="w-12 h-12 rounded-lg bg-gray-50 border border-gray-100 flex items-center justify-center overflow-hidden shrink-0 p-1.5">
+                  {testimonial.logoUrl ? (
+                    <img src={testimonial.logoUrl} alt="" className="w-full h-full object-contain" />
+                  ) : testimonial.logoSvg ? (
+                    <span className="w-8 h-8 block">{testimonial.logoSvg}</span>
+                  ) : (
+                    <span className="text-[#2563EB] font-bold text-sm">{testimonial.logo}</span>
+                  )}
                 </div>
+                <span className="font-semibold text-[#0B1C3F] text-sm">{testimonial.company}</span>
               </div>
             </motion.div>
           ))}

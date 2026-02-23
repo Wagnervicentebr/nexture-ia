@@ -51,7 +51,7 @@ export function DifferentiationSection() {
       bootcamp: false
     },
     {
-      feature: 'Metodologia ágil',
+      feature: 'Metodologia própria e comprovada',
       nexture: true,
       traditional: false,
       bootcamp: true
@@ -80,10 +80,10 @@ export function DifferentiationSection() {
           </div>
           
           <h2 className="text-4xl lg:text-5xl font-['Poppins'] font-semibold text-[#0B1C3F] mb-4">
-            Por Que a Nexture É Diferente
+            Por que a Nexture é diferente
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Uma abordagem única que combina IA, prática real e mentalidade de produto
+            Uma abordagem única que combina IA, prática real e mentalidade de produto.
           </p>
         </motion.div>
 
@@ -121,7 +121,7 @@ export function DifferentiationSection() {
         >
           <div className="bg-gradient-to-r from-[#0B1C3F] to-[#2563EB] px-8 py-6">
             <h3 className="text-2xl font-['Poppins'] font-semibold text-white">
-              Nexture vs. Formação Tradicional
+              Nexture vs. Outras formações
             </h3>
             <p className="text-blue-100 mt-2">
               Compare nossa metodologia com cursos tradicionais e bootcamps

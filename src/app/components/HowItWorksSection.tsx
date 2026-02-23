@@ -27,8 +27,8 @@ export function HowItWorksSection() {
     {
       number: '04',
       icon: Users,
-      title: 'Treinamento / Alocação',
-      description: 'Iniciamos a formação do time interno ou apresentamos candidatos pré-qualificados.',
+      title: 'Treinamento / Portal de Profissionais',
+      description: 'Iniciamos a formação do time interno ou apresentamos candidatos pré-qualificados para sua contratação',
       details: ['Início imediato', 'Mentoria ativa', 'Projetos práticos']
     },
     {
@@ -135,7 +135,7 @@ export function HowItWorksSection() {
                         {index === 1 && 'Escolha a melhor estratégia para seu contexto'}
                         {index === 2 && 'Planejamento detalhado e alinhado aos objetivos'}
                         {index === 3 && 'Transformação em ação com resultados tangíveis'}
-                        {index === 4 && 'Acompanhamento próximo para garantir sucesso'}
+                        {index === 4 && 'Contínuo durante a formação'}
                       </p>
                     </div>
                   </div>

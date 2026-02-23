@@ -13,7 +13,8 @@ export function SolutionSection() {
   const model1Benefits = [
     'Reduza dependência de contratações seniores',
     'Ative projetos parados',
-    'Construa cultura de IA internamente'
+    'Construa cultura de IA internamente',
+    'Tudo isso com custo muito baixo'
   ];
 
   const model2Features = [
@@ -26,7 +27,8 @@ export function SolutionSection() {
   const model2Benefits = [
     'Contratação mais rápida',
     'Custo menor que seniores',
-    'Pipeline contínuo de talentos'
+    'Pipeline contínuo de talentos',
+    'Pessoas prontas e produtivas'
   ];
 
   return (

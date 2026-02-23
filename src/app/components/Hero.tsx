@@ -18,7 +18,7 @@ export function Hero() {
               <span className="text-sm font-medium">🚀 Solução B2B para Empresas</span>
             </div>
             
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-['Poppins'] font-semibold leading-tight mb-6">Forme Desenvolvedores com IA ou Contrate Talentos Prontos Reduza Custos e Acelere Entregas</h1>
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-['Poppins'] font-semibold leading-tight mb-6">Forme Desenvolvedores com IA ou Contrate Talentos Prontos. Reduza Custos e Acelere Entregas</h1>
             
             <p className="text-xl text-blue-100 mb-8 leading-relaxed">
               A Nexture ajuda empresas a treinar talentos juniores com IA ou contratar desenvolvedores já formados em nossa metodologia prática.
@@ -68,7 +68,7 @@ export function Hero() {
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Produtividade com IA</p>
-                  <p className="text-2xl font-bold text-[#0B1C3F]">+300%</p>
+                  <p className="text-2xl font-bold text-[#0B1C3F]">+43%</p>
                 </div>
               </div>
             </motion.div>
