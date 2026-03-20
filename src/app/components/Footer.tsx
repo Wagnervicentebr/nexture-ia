@@ -16,7 +16,7 @@ export function Footer() {
       { label: 'Casos de Sucesso', href: '#' }
     ],
     recursos: [
-      { label: 'Blog', href: '#' },
+      { label: 'Perfil do aluno', href: '/perfil-aluno' },
       { label: 'Webinars', href: '#' },
       { label: 'E-books', href: '#' },
       { label: 'FAQ', href: '#' }

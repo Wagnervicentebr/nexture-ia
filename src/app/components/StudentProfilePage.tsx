@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { ArrowLeft, Brain, Briefcase, Clock3, Rocket, Sparkles, Target } from "lucide-react";
 import React from "react";
+import { Link } from "react-router";
 
 const logoNexture = new URL("../../assets/logo-nexture.png", import.meta.url).href;
 
@@ -121,16 +122,16 @@ export function StudentProfilePage() {
           transition={{ duration: 0.5 }}
           className="mb-10 flex items-center justify-between rounded-2xl border border-white/15 bg-white/10 px-4 py-3 backdrop-blur-md md:px-5"
         >
-           <a
-            href="/"
+           <Link
+            to="/"
             className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/15 px-3 py-1.5 text-xs font-medium text-blue-50/90 transition-colors hover:bg-white/15 md:text-sm"
           >
             <ArrowLeft className="h-4 w-4" />
             Voltar
-          </a>
-          <a href="/" className="flex items-center">
+          </Link>
+          <Link to="/" className="flex items-center">
             <img src={logoNexture} alt="Nexture IA" className="h-8 w-auto object-contain md:h-9" />
-          </a>
+          </Link>
          
         </motion.header>
 

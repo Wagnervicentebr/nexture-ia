@@ -1,3 +1,4 @@
+import React from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { ProblemSection } from './components/ProblemSection';
@@ -9,15 +10,9 @@ import { SocialProofSection } from './components/SocialProofSection';
 import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
 import { StudentProfilePage } from './components/StudentProfilePage';
+import { Navigate, Route, Routes } from 'react-router';
 
-export default function App() {
-  const isStudentProfileRoute =
-    typeof window !== "undefined" && window.location.pathname === "/perfil-aluno";
-
-  if (isStudentProfileRoute) {
-    return <StudentProfilePage />;
-  }
-
+function HomePage() {
   return (
     <div className="min-h-screen bg-white font-['Inter']">
       <Navbar />
@@ -50,5 +45,15 @@ export default function App() {
       
       <Footer />
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/perfil-aluno" element={<StudentProfilePage />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
   );
 }
