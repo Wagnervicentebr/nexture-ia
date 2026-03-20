@@ -8,8 +8,16 @@ import { HowItWorksSection } from './components/HowItWorksSection';
 import { SocialProofSection } from './components/SocialProofSection';
 import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
+import { StudentProfilePage } from './components/StudentProfilePage';
 
 export default function App() {
+  const isStudentProfileRoute =
+    typeof window !== "undefined" && window.location.pathname === "/perfil-aluno";
+
+  if (isStudentProfileRoute) {
+    return <StudentProfilePage />;
+  }
+
   return (
     <div className="min-h-screen bg-white font-['Inter']">
       <Navbar />
